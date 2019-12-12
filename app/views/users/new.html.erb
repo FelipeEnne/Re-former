@@ -1,5 +1,7 @@
 <h1>Create New User</h1>
+
 <form action="/users" method="POST" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>
     <label for="username">Enter Username</label><br>
     <input type="text" id="username" name="username">
@@ -16,3 +18,4 @@
     <input type="submit" name="submit" value="Create Account">
   </p>
 </form>
+
