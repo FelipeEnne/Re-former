@@ -4,15 +4,15 @@
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>
     <label for="username">Enter Username</label><br>
-    <input type="text" id="username" name="username">
+    <input type="text" id="username" name="user[username]">
   </p>
   <p>
     <label for="email">Enter Email</label><br>
-    <input type="email" id="email" name="email">
+    <input type="email" id="email" name="user[email]">
   </p>
   <p>
     <label for="password">Enter Password</label><br>
-    <input type="password" id="password" name="password">
+    <input type="password" id="password" name="user[password]">
   </p>
   <p>
     <input type="submit" name="submit" value="Create Account">
