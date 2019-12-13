@@ -23,7 +23,7 @@
 
 <%
 =begin %>
-<%= form_tag("/users", method: "POST") do %>
+ <%= form_tag(users_path, method: "POST") do %>
   <p>
   <%= label_tag(:username, "Username") %><br>
   <%= text_field_tag(:username) %>
@@ -41,30 +41,4 @@
 <%
 =end %>
 
-<%= form_for(@user) do |f| %>
-
-  <% if @user.errors.any? %>
-  <p>The following <%= pluralize(@user.errors.count, 'error')%> prevented your form from being created!</p>
-    <% @user.errors.full_messages.each do |error| %>
-      <p>
-        <%= error %>
-      </p>
-    <% end %>
-  <% end %>
-
-  <p>
-    <%= f.label :username, "Enter Username" %><br>
-    <%= f.text_field :username, placeholder: "Enter username here"%>
-  </p>
-  <p>
-    <%= f.label :email, "Enter Email" %><br>
-    <%= f.email_field :email, placeholder: "example@eample.com"%>
-  </p>
-  <p>
-    <%= f.label :password, "Enter Password" %><br>
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.submit "Create Account" %>
-  </p>
-<% end %>
+<%= render 'form' %>
