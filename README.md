@@ -1,5 +1,5 @@
 <!--
-*** Thanks for checking out this README Template. 
+*** Thanks for checking out this README Template.
 -->
 
 
@@ -32,24 +32,28 @@ This project will teach you the multiple ways to build a form in rails that can 
 Full task description: <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/forms"> Odin Project.</a>
 
 
-### Built With 
+### Built With
 
 * Git
-* Ruby
-* Ruby on Rails
+* Ruby 3.3
+* Ruby on Rails 7.2
+* SQLite
 * HTML
 * CSS
+* importmap-rails
+* Turbo & Stimulus
 
 ## Required Installations
 
 <p>If you want a copy of this project running on your machine you have to install:</p>
 
-* Ruby 2.6.4
-* Gem 3.0.3
-* Rails 6.0.1
-* Bundler 2.0.2
+* Ruby 3.3.11
+* Bundler 2.5+
+* Rails 7.2.3+
 
-<a href="https://www.tutorialspoint.com/ruby-on-rails/rails-installation"> Installation Instructions</a>
+<a href="https://guides.rubyonrails.org/getting_started.html"> Installation Instructions</a>
+
+<p>This project does not require Node.js or Yarn. JavaScript is managed with importmap-rails.</p>
 
 <!-- INSTALATION -->
 ## Instalation of This App
@@ -59,7 +63,7 @@ Once you have installed the requiered packages shown on the [Required Installati
 Clone the Repository,
 
 ```Shell
-your@pc:~$ git clone https://github.com/FelipeEnne/Re-former/tree/development
+your@pc:~$ git clone https://github.com/FelipeEnne/Re-former.git
 ```
 
 Move to the downloaded folder
@@ -71,7 +75,7 @@ your@pc:~$ cd Re-former
 install gems
 
 ```Shell
-your@pc:~$ bundle install --without production
+your@pc:~$ bundle install
 ```
 
 migrate the database
@@ -87,6 +91,18 @@ your@pc:~$ rails server
 ```
 
 Then, go to [http://localhost:3000/users/new](http://localhost:3000/users/new)
+
+Run the test suite:
+
+```Shell
+your@pc:~$ rails test
+```
+
+Check for known gem vulnerabilities:
+
+```Shell
+your@pc:~$ bundle exec bundler-audit check
+```
 
 <!-- LICENSE -->
 ## License
